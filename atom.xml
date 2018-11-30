@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-29T08:54:28.418Z</updated>
+  <updated>2018-11-30T09:44:20.390Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/11/29/hello-world/"/>
-    <id>http://yoursite.com/2018/11/29/hello-world/</id>
-    <published>2018-11-29T08:54:28.418Z</published>
-    <updated>2018-11-29T08:54:28.418Z</updated>
+    <title>便签</title>
+    <link href="http://yoursite.com/2018/11/30/%E4%BE%BF%E7%AD%BE/"/>
+    <id>http://yoursite.com/2018/11/30/便签/</id>
+    <published>2018-11-30T09:06:19.000Z</published>
+    <updated>2018-11-30T09:44:20.390Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="博客链接"><a href="#博客链接" class="headerlink" title="博客链接"></a>博客链接</h4><ul><li><p><a href="http://numbbbbb.com/" target="_blank" rel="noopener">梁杰的个人博客</a> </p><blockquote><p>清华大佬 经常分享一些学习方法文风很喜欢</p></blockquote></li><li><p><a href="https://huaji8.top/" target="_blank" rel="noopener">幻想帖</a></p><blockquote><p>前端程序员 node.js 主要代表作 hexo 动画模型插件Live2d</p></blockquote></li><li><p><a href="https://blog.daliansky.net/" target="_blank" rel="noopener">黑果小兵的部落阁</a></p><blockquote><p>macOS大佬 主要参考他博客的风格以及功能的实现</p></blockquote></li></ul><hr><h4 id="资料链接"><a href="#资料链接" class="headerlink" title="资料链接"></a>资料链接</h4><ul><li><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">Markdown基本语法</a></li><li><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">Markdown 语法说明 官方文档</a></li><li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方文档</a></li><li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">NexT主题优化</a></li><li><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">hexo的next主题个性化教程：打造炫酷网站</a></li><li><a href="https://segmentfault.com/a/1190000010434546" target="_blank" rel="noopener">hexo-admin后台管理博客</a></li></ul><hr><h4 id="工具链接"><a href="#工具链接" class="headerlink" title="工具链接"></a>工具链接</h4><ul><li><a href="https://dillinger.io/" target="_blank" rel="noopener">dillinger 在线Markdown编辑器</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      记录自己关注的博客主、资料链接、工具链接
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>my first blog</title>
+    <link href="http://yoursite.com/2018/11/30/my-first-blog/"/>
+    <id>http://yoursite.com/2018/11/30/my-first-blog/</id>
+    <published>2018-11-30T07:06:23.000Z</published>
+    <updated>2018-11-30T08:01:44.203Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="起始"><a href="#起始" class="headerlink" title="起始"></a>起始</h3><p>很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了我搭建个人博客的念头，边看教程边依葫芦画瓢也像模像样的搭建了起来，过程看了很多人搭建博客的经验，有些前辈文章写得非常幽默让我这个小白觉得乐在其中，下一篇博客准备也来分享一下我建立这个博客的过程希望能够帮助到别人。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;h3 id=&quot;起始&quot;&gt;&lt;a href=&quot;#起始&quot; class=&quot;headerlink&quot; title=&quot;起始&quot;&gt;&lt;/a&gt;起始&lt;/h3&gt;&lt;p&gt;很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了
       
     
     </summary>
