@@ -81,17 +81,19 @@
 
 
 
-<meta name="description" content="起始很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了我搭建个人博客的念头，边看教程边依葫芦画瓢也像模像样的搭建了起来，过程看了很多人搭建博客的经验，有些前辈文章写得非常幽默让我这个小白觉得乐在其中，下一篇博客准备也来分享一下我建立这个博客的过程希望能够帮助到别人。">
+<meta name="description" content="什么是PRC？如何实现一个PRC？RMI与PRC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first blog">
-<meta property="og:url" content="http://yoursite.com/2018/11/30/my-first-blog/index.html">
+<meta property="og:title" content="分布式通信之PRC协议">
+<meta property="og:url" content="http://yoursite.com/2019/01/10/分布式通信之PRC协议/index.html">
 <meta property="og:site_name" content="轻云">
-<meta property="og:description" content="起始很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了我搭建个人博客的念头，边看教程边依葫芦画瓢也像模像样的搭建了起来，过程看了很多人搭建博客的经验，有些前辈文章写得非常幽默让我这个小白觉得乐在其中，下一篇博客准备也来分享一下我建立这个博客的过程希望能够帮助到别人。">
+<meta property="og:description" content="什么是PRC？如何实现一个PRC？RMI与PRC">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-30T08:01:44.203Z">
+<meta property="og:image" content="http://yoursite.com/images/rpc-module.png">
+<meta property="og:updated_time" content="2019-01-10T13:14:44.863Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my first blog">
-<meta name="twitter:description" content="起始很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了我搭建个人博客的念头，边看教程边依葫芦画瓢也像模像样的搭建了起来，过程看了很多人搭建博客的经验，有些前辈文章写得非常幽默让我这个小白觉得乐在其中，下一篇博客准备也来分享一下我建立这个博客的过程希望能够帮助到别人。">
+<meta name="twitter:title" content="分布式通信之PRC协议">
+<meta name="twitter:description" content="什么是PRC？如何实现一个PRC？RMI与PRC">
+<meta name="twitter:image" content="http://yoursite.com/images/rpc-module.png">
 
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/30/my-first-blog/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/10/分布式通信之PRC协议/">
 
 
 
 
 
-  <title>my first blog | 轻云</title>
+  <title>分布式通信之PRC协议 | 轻云</title>
   
 
 
@@ -305,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/my-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/10/分布式通信之PRC协议/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="轻云">
@@ -322,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">my first blog</h1>
+          <h1 class="post-title" itemprop="name headline">分布式通信之PRC协议</h1>
         
 
         <div class="post-meta">
@@ -334,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-30T15:06:23+08:00">
-                2018-11-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-10T20:03:00+08:00">
+                2019-01-10
               </time>
             
 
@@ -358,6 +360,10 @@
           
 
           
+              <div class="post-description">
+                  什么是PRC？如何实现一个PRC？RMI与PRC
+              </div>
+          
 
         </div>
       </header>
@@ -372,7 +378,29 @@
       
 
       
-        <h3 id="起始"><a href="#起始" class="headerlink" title="起始"></a>起始</h3><p>很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了我搭建个人博客的念头，边看教程边依葫芦画瓢也像模像样的搭建了起来，过程看了很多人搭建博客的经验，有些前辈文章写得非常幽默让我这个小白觉得乐在其中，下一篇博客准备也来分享一下我建立这个博客的过程希望能够帮助到别人。</p>
+        <h4 id="什么是PRC"><a href="#什么是PRC" class="headerlink" title="什么是PRC"></a>什么是PRC</h4><blockquote>
+<p>PRC(Remote Procedure Call Protocal ) 远程过程调用协议</p>
+</blockquote>
+<p>通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术</p>
+<p>也就是说网络协议和网络IO对于调用端和服务端来说是透明的，客户端在不知道调用细节的情况下，调用存在于远程计算机上的某个对象，就像调用本地应用程序中的对象一样</p>
+<p><strong>RPC协议其实一个规范</strong>，实现了RPC的框架有Dubbo、Thrif、RMI、Webservice、Hessain等等。<br><img src="/images/rpc-module.png" alt="RPC框架包含的要素"></p>
+<h4 id="RMI的概述"><a href="#RMI的概述" class="headerlink" title="RMI的概述"></a>RMI的概述</h4><blockquote>
+<p>RMI(remote method invocation)  , 可以认为是RPC的java版本<br>RMI使用的是JRMP（Java Remote Messageing Protocol）, JRMP是专门为java定制的通信协议，所以踏实纯java的分布式解决方案</p>
+</blockquote>
+<h5 id="如何实现一个RMI程序"><a href="#如何实现一个RMI程序" class="headerlink" title="如何实现一个RMI程序"></a>如何实现一个RMI程序</h5><ol>
+<li>创建远程接口， 并且继承java.rmi.Remote接口</li>
+<li>实现远程接口，并且继承：UnicastRemoteObject</li>
+<li>创建服务器程序： createRegistry方法注册远程对象</li>
+<li>创建客户端程序</li>
+</ol>
+<h5 id="手写一个RMI"><a href="#手写一个RMI" class="headerlink" title="手写一个RMI"></a>手写一个RMI</h5><ol>
+<li>编写服务器程序，暴露一个监听， 可以使用socket</li>
+<li>编写客户端程序，通过ip和端口连接到指定的服务器，并且将数据做封装（序列化）</li>
+<li>服务器端收到请求，先反序列化。再进行业务逻辑处理。把返回结果序列化返回</li>
+</ol>
+<h4 id="RMI缺点"><a href="#RMI缺点" class="headerlink" title="RMI缺点"></a>RMI缺点</h4><p>1.RMI是基于java语言实现的所以无法跨语言<br>2.RMI无法做负载均衡，如果注册中心挂掉之后我们的所有客户端就无法使用<br>3.RMI的序列化是采用的java原生的序列化 效率比较低（生成的结果大，时间长）<br>4.服务端底层采用BIO的方式，性能比较差<br>5.如果发生异常则系统无法调用，无法重新尝试</p>
+<p>知识点：<br>BIO：同步阻塞式IO，服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，当然可以通过线程池机制改善。 </p>
+<p>NIO：同步非阻塞式IO，服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I/O请求时才启动一个线程进行处理。 </p>
 
       
     </div>
@@ -397,15 +425,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/30/便签/" rel="next" title="便签">
+                <i class="fa fa-chevron-left"></i> 便签
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/30/便签/" rel="prev" title="便签">
-                便签 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -526,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#起始"><span class="nav-number">1.</span> <span class="nav-text">起始</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是PRC"><span class="nav-number">1.</span> <span class="nav-text">什么是PRC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RMI的概述"><span class="nav-number">2.</span> <span class="nav-text">RMI的概述</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何实现一个RMI程序"><span class="nav-number">2.1.</span> <span class="nav-text">如何实现一个RMI程序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#手写一个RMI"><span class="nav-number">2.2.</span> <span class="nav-text">手写一个RMI</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RMI缺点"><span class="nav-number">3.</span> <span class="nav-text">RMI缺点</span></a></li></ol></div>
             
 
           </div>
