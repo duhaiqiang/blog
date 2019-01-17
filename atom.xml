@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-17T06:10:51.905Z</updated>
+  <updated>2019-01-17T06:26:08.247Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/01/17/VMWare-%E5%85%8B%E9%9A%86%E9%95%9C%E5%83%8F%E5%90%8E%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2019/01/17/VMWare-克隆镜像后如何配置/</id>
     <published>2019-01-17T04:26:13.000Z</published>
-    <updated>2019-01-17T06:10:51.905Z</updated>
+    <updated>2019-01-17T06:26:08.247Z</updated>
     
     <content type="html"><![CDATA[<p>1.生成本机uuid<br>uuidgen<br>2.修改网络配置文件<br>vi /etc/sysconfig/network-scripts/ifcfg-eth0<br>UUID=”174b37aa-44ad-46f2-9e30-d3e4dbfa0eaf”<br>IPADDR=192.168.1.67<br>3.重启网卡<br>systemctl restart network (CentOS7)<br>service network restart (CentOS6)</p>]]></content>
     
@@ -34,6 +34,10 @@
     
     </summary>
     
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
   </entry>
   
