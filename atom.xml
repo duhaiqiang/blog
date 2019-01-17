@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-10T13:14:44.863Z</updated>
+  <updated>2019-01-17T06:10:51.905Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VMWare 克隆镜像后如何配置</title>
+    <link href="http://yoursite.com/2019/01/17/VMWare-%E5%85%8B%E9%9A%86%E9%95%9C%E5%83%8F%E5%90%8E%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2019/01/17/VMWare-克隆镜像后如何配置/</id>
+    <published>2019-01-17T04:26:13.000Z</published>
+    <updated>2019-01-17T06:10:51.905Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.生成本机uuid<br>uuidgen<br>2.修改网络配置文件<br>vi /etc/sysconfig/network-scripts/ifcfg-eth0<br>UUID=”174b37aa-44ad-46f2-9e30-d3e4dbfa0eaf”<br>IPADDR=192.168.1.67<br>3.重启网卡<br>systemctl restart network (CentOS7)<br>service network restart (CentOS6)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.生成本机uuid&lt;br&gt;uuidgen&lt;br&gt;2.修改网络配置文件&lt;br&gt;vi /etc/sysconfig/network-scripts/ifcfg-eth0&lt;br&gt;UUID=”174b37aa-44ad-46f2-9e30-d3e4dbfa0eaf”&lt;br&gt;IPA
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>分布式通信之PRC协议</title>
