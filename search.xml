@@ -1,29 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[VMWare 克隆镜像后如何配置]]></title>
-    <url>%2F2019%2F01%2F17%2FVMWare-%E5%85%8B%E9%9A%86%E9%95%9C%E5%83%8F%E5%90%8E%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[1.生成本机uuiduuidgen2.修改网络配置文件vi /etc/sysconfig/network-scripts/ifcfg-eth0UUID=”174b37aa-44ad-46f2-9e30-d3e4dbfa0eaf”IPADDR=192.168.1.673.重启网卡systemctl restart network (CentOS7)service network restart (CentOS6)]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>VMWare 克隆镜像后如何配置</title>
+      <link href="/2019/01/17/VMWare-%E5%85%8B%E9%9A%86%E9%95%9C%E5%83%8F%E5%90%8E%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE/"/>
+      <url>/2019/01/17/VMWare-%E5%85%8B%E9%9A%86%E9%95%9C%E5%83%8F%E5%90%8E%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<p>1.生成本机uuid<br>uuidgen<br>2.修改网络配置文件<br>vi /etc/sysconfig/network-scripts/ifcfg-eth0<br>UUID=”174b37aa-44ad-46f2-9e30-d3e4dbfa0eaf”<br>IPADDR=192.168.1.67<br>3.重启网卡<br>systemctl restart network (CentOS7)<br>service network restart (CentOS6)  </p>]]></content>
+      
+      
       <categories>
-        <category>技术</category>
+          
+          <category> 技术 </category>
+          
       </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[分布式通信之PRC协议]]></title>
-    <url>%2F2019%2F01%2F10%2F%E5%88%86%E5%B8%83%E5%BC%8F%E9%80%9A%E4%BF%A1%E4%B9%8BPRC%E5%8D%8F%E8%AE%AE%2F</url>
-    <content type="text"><![CDATA[什么是PRC PRC(Remote Procedure Call Protocal ) 远程过程调用协议 通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术 也就是说网络协议和网络IO对于调用端和服务端来说是透明的，客户端在不知道调用细节的情况下，调用存在于远程计算机上的某个对象，就像调用本地应用程序中的对象一样 RPC协议其实一个规范，实现了RPC的框架有Dubbo、Thrif、RMI、Webservice、Hessain等等。 RMI的概述 RMI(remote method invocation) , 可以认为是RPC的java版本RMI使用的是JRMP（Java Remote Messageing Protocol）, JRMP是专门为java定制的通信协议，所以踏实纯java的分布式解决方案 如何实现一个RMI程序 创建远程接口， 并且继承java.rmi.Remote接口 实现远程接口，并且继承：UnicastRemoteObject 创建服务器程序： createRegistry方法注册远程对象 创建客户端程序 手写一个RMI 编写服务器程序，暴露一个监听， 可以使用socket 编写客户端程序，通过ip和端口连接到指定的服务器，并且将数据做封装（序列化） 服务器端收到请求，先反序列化。再进行业务逻辑处理。把返回结果序列化返回 RMI缺点1.RMI是基于java语言实现的所以无法跨语言2.RMI无法做负载均衡，如果注册中心挂掉之后我们的所有客户端就无法使用3.RMI的序列化是采用的java原生的序列化 效率比较低（生成的结果大，时间长）4.服务端底层采用BIO的方式，性能比较差5.如果发生异常则系统无法调用，无法重新尝试 知识点：BIO：同步阻塞式IO，服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，当然可以通过线程池机制改善。 NIO：同步非阻塞式IO，服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I/O请求时才启动一个线程进行处理。]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[便签]]></title>
-    <url>%2F2018%2F11%2F30%2F%E4%BE%BF%E7%AD%BE%2F</url>
-    <content type="text"><![CDATA[博客链接 梁杰的个人博客 清华大佬 经常分享一些学习方法文风很喜欢 幻想帖 前端程序员 node.js 主要代表作 hexo 动画模型插件Live2d 黑果小兵的部落阁 macOS大佬 主要参考他博客的风格以及功能的实现 妖歌 java前辈 有很多java知识可以学习 angelkitty 很厉害的女孩子 资料链接 Markdown基本语法 Markdown 语法说明 官方文档 Hexo 官方文档 NexT主题优化 hexo的next主题个性化教程：打造炫酷网站 hexo-admin后台管理博客 工具链接 dillinger 在线Markdown编辑器]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[my first blog]]></title>
-    <url>%2F2018%2F11%2F30%2Fmy-first-blog%2F</url>
-    <content type="text"><![CDATA[起始很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了我搭建个人博客的念头，边看教程边依葫芦画瓢也像模像样的搭建了起来，过程看了很多人搭建博客的经验，有些前辈文章写得非常幽默让我这个小白觉得乐在其中，下一篇博客准备也来分享一下我建立这个博客的过程希望能够帮助到别人。]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分布式通信之PRC协议</title>
+      <link href="/2019/01/10/%E5%88%86%E5%B8%83%E5%BC%8F%E9%80%9A%E4%BF%A1%E4%B9%8BPRC%E5%8D%8F%E8%AE%AE/"/>
+      <url>/2019/01/10/%E5%88%86%E5%B8%83%E5%BC%8F%E9%80%9A%E4%BF%A1%E4%B9%8BPRC%E5%8D%8F%E8%AE%AE/</url>
+      
+        <content type="html"><![CDATA[<h4 id="什么是PRC"><a href="#什么是PRC" class="headerlink" title="什么是PRC"></a>什么是PRC</h4><blockquote><p>PRC(Remote Procedure Call Protocal ) 远程过程调用协议</p></blockquote><p>通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术</p><p>也就是说网络协议和网络IO对于调用端和服务端来说是透明的，客户端在不知道调用细节的情况下，调用存在于远程计算机上的某个对象，就像调用本地应用程序中的对象一样</p><p><strong>RPC协议其实一个规范</strong>，实现了RPC的框架有Dubbo、Thrif、RMI、Webservice、Hessain等等。<br><img src="/images/rpc-module.png" alt="RPC框架包含的要素"></p><h4 id="RMI的概述"><a href="#RMI的概述" class="headerlink" title="RMI的概述"></a>RMI的概述</h4><blockquote><p>RMI(remote method invocation)  , 可以认为是RPC的java版本<br>RMI使用的是JRMP（Java Remote Messageing Protocol）, JRMP是专门为java定制的通信协议，所以踏实纯java的分布式解决方案</p></blockquote><h5 id="如何实现一个RMI程序"><a href="#如何实现一个RMI程序" class="headerlink" title="如何实现一个RMI程序"></a>如何实现一个RMI程序</h5><ol><li>创建远程接口， 并且继承java.rmi.Remote接口</li><li>实现远程接口，并且继承：UnicastRemoteObject</li><li>创建服务器程序： createRegistry方法注册远程对象</li><li>创建客户端程序</li></ol><h5 id="手写一个RMI"><a href="#手写一个RMI" class="headerlink" title="手写一个RMI"></a>手写一个RMI</h5><ol><li>编写服务器程序，暴露一个监听， 可以使用socket</li><li>编写客户端程序，通过ip和端口连接到指定的服务器，并且将数据做封装（序列化）</li><li>服务器端收到请求，先反序列化。再进行业务逻辑处理。把返回结果序列化返回</li></ol><h4 id="RMI缺点"><a href="#RMI缺点" class="headerlink" title="RMI缺点"></a>RMI缺点</h4><p>1.RMI是基于java语言实现的所以无法跨语言<br>2.RMI无法做负载均衡，如果注册中心挂掉之后我们的所有客户端就无法使用<br>3.RMI的序列化是采用的java原生的序列化 效率比较低（生成的结果大，时间长）<br>4.服务端底层采用BIO的方式，性能比较差<br>5.如果发生异常则系统无法调用，无法重新尝试</p><p>知识点：<br>BIO：同步阻塞式IO，服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，当然可以通过线程池机制改善。 </p><p>NIO：同步非阻塞式IO，服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I/O请求时才启动一个线程进行处理。 </p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>便签</title>
+      <link href="/2018/11/30/%E4%BE%BF%E7%AD%BE/"/>
+      <url>/2018/11/30/%E4%BE%BF%E7%AD%BE/</url>
+      
+        <content type="html"><![CDATA[<h4 id="博客链接"><a href="#博客链接" class="headerlink" title="博客链接"></a>博客链接</h4><ul><li><p><a href="http://numbbbbb.com/" target="_blank" rel="noopener">梁杰的个人博客</a> </p><blockquote><p>清华大佬 经常分享一些学习方法文风很喜欢</p></blockquote></li><li><p><a href="https://huaji8.top/" target="_blank" rel="noopener">幻想帖</a></p><blockquote><p>前端程序员 node.js 主要代表作 hexo 动画模型插件Live2d</p></blockquote></li><li><p><a href="https://blog.daliansky.net/" target="_blank" rel="noopener">黑果小兵的部落阁</a></p><blockquote><p>macOS大佬 主要参考他博客的风格以及功能的实现</p></blockquote></li><li><p><a href="http://atecher.com/" target="_blank" rel="noopener">妖歌</a></p><blockquote><p>java前辈 有很多java知识可以学习</p></blockquote></li><li><p><a href="https://angelkitty.net/" target="_blank" rel="noopener">angelkitty</a></p><blockquote><p>很厉害的女孩子</p></blockquote></li></ul><hr><h4 id="资料链接"><a href="#资料链接" class="headerlink" title="资料链接"></a>资料链接</h4><ul><li><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">Markdown基本语法</a></li><li><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">Markdown 语法说明 官方文档</a></li><li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方文档</a></li><li><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">NexT主题优化</a></li><li><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">hexo的next主题个性化教程：打造炫酷网站</a></li><li><a href="https://segmentfault.com/a/1190000010434546" target="_blank" rel="noopener">hexo-admin后台管理博客</a></li></ul><hr><h4 id="工具链接"><a href="#工具链接" class="headerlink" title="工具链接"></a>工具链接</h4><ul><li><a href="https://dillinger.io/" target="_blank" rel="noopener">dillinger 在线Markdown编辑器</a></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>my first blog</title>
+      <link href="/2018/11/30/my-first-blog/"/>
+      <url>/2018/11/30/my-first-blog/</url>
+      
+        <content type="html"><![CDATA[<h3 id="起始"><a href="#起始" class="headerlink" title="起始"></a>起始</h3><p>很久之前就有搭建一个博客的想法，但是拖延症嘛，实在是我太懒…从昨天看到某位博客主在自己的博客里面放了一个很有趣的2d动画模型开始又重新点燃了我搭建个人博客的念头，边看教程边依葫芦画瓢也像模像样的搭建了起来，过程看了很多人搭建博客的经验，有些前辈文章写得非常幽默让我这个小白觉得乐在其中，下一篇博客准备也来分享一下我建立这个博客的过程希望能够帮助到别人。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
